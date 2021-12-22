@@ -1,6 +1,8 @@
 package main.java;
 
 import main.java.entity.City;
+import main.java.entity.Ticket;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -18,5 +20,23 @@ public class Manegement {
         session.close();
 
     }
-    public 
+    public int checkExitOfCity(String nameCity){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql = "select * from city where name = :nameCity";
+        SQLQuery query = session.createSQLQuery(sql);
+        query.addEntity(City.class);
+        query.setParameter("name", nameCity);
+        int output = (Integer) query.list().size();
+        session.close();
+        return output;
+
+    }
+    public void addTicketByManager(Ticket ticket){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(ticket);
+        transaction.commit();
+        session.close();
+    }
 }
