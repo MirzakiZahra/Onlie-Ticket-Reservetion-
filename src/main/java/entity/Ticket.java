@@ -1,19 +1,18 @@
-package entity;
+package main.java.entity;
 
-import entity.City;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+
 @Entity
 @Data
 public class Ticket {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne
-    private User user;
+    private main.java.entity.User user;
     @ManyToOne
     private City originCity;
     @ManyToOne
