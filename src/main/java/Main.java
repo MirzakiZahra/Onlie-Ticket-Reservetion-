@@ -52,8 +52,12 @@ public class Main {
                                     ,scanner.next(),scanner.next(),scanner.nextInt());
                                     break;
                                 case 3:
+                                    System.out.println("please enter name & plaque");
+                                    manegement.createVehicel(scanner.next(),scanner.nextInt());
                                     break;
                                 case 4:
+                                    manegement.getSoldTicket().stream()
+                                            .forEach(i-> System.out.println(i));
                                     break;
                                 case 5:
                                     break;

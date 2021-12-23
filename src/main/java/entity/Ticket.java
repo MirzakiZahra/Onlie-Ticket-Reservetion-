@@ -36,4 +36,18 @@ public class Ticket {
         this.destinationCity = destinationCity;
         this.vehicle = vehicle;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", count=" + count +
+                ", barcode=" + barcode +
+                ", dispatchTime=" + dispatchTime +
+                ", user=" + user +
+                ", originCity=" + originCity +
+                ", destinationCity=" + destinationCity +
+                ", vehicle=" + vehicle +
+                '}';
+    }
 }

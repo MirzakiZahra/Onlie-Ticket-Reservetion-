@@ -1,5 +1,6 @@
 package main.java.dto;
 
+import lombok.Data;
 import main.java.dao.CityService;
 import main.java.dao.TicketService;
 import main.java.dao.UserService;
@@ -9,11 +10,10 @@ import main.java.entity.Ticket;
 import main.java.entity.User;
 import main.java.entity.Vehicle;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+@Data
 public class Manegement {
     TicketService ticketService = new TicketService();
     UserService userService = new UserService();
@@ -50,6 +50,10 @@ public class Manegement {
         City city=new City(name,length,width);
         cityService.addCityByManager(city);
 
+    }
+    public void createVehicel(String name,int plaque){
+        Vehicle vehicle= new Vehicle(name, Vehicle.VehicleType.BUS,plaque);
+        vehicelService.addVehicel(vehicle);
     }
 
 }
