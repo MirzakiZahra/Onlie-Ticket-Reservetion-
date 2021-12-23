@@ -24,4 +24,5 @@ public class Manegement {
         User user=new User(firstName,lastName,nationalCode);
         userService.addUser(user);
     }
+
 }
