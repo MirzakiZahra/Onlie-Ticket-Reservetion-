@@ -14,8 +14,9 @@ public class Manager {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private int username;
-    private int passWord;
+    private  final  int username=123;
+    private  final  int passWord=1234;
+
 
 
 }

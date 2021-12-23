@@ -10,13 +10,16 @@ import main.java.entity.User;
 import main.java.entity.Vehicle;
 
 import javax.xml.crypto.Data;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Manegement {
     TicketService ticketService = new TicketService();
     UserService userService = new UserService();
     CityService cityService=new CityService();
     VehicelService vehicelService=new VehicelService();
+    List<Ticket> soldTicket = new ArrayList<>();
 
     public void reservation(int barcode, int nationalCode) {
         Ticket ticket = ticketService.findTicket(barcode);
@@ -27,7 +30,7 @@ public class Manegement {
         ticket.setUser(user);
         ticketService.updateTicket(ticket);
         userService.updateUser(user);
-
+        this.soldTicket.add(ticket);
     }
     public void createUser(String firstName,String lastName,int nationalCode){
         User user=new User(firstName,lastName,nationalCode);
@@ -41,6 +44,11 @@ public class Manegement {
         Ticket ticket=new Ticket(count,barcode,time,originCity,destinationCity,vehicle);
         ticketService.addTicketByManager(ticket);
 
+
+    }
+    public void createCity(String name,  int length,int width){
+        City city=new City(name,length,width);
+        cityService.addCityByManager(city);
 
     }
 
