@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8358d6b3-8462-4341-ac22-36512a5f812e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Manegement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Manegement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Manegement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Manegement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Manegement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640286497441</updated>
-      <workItem from="1640286505028" duration="4372000" />
+      <workItem from="1640286505028" duration="5410000" />
     </task>
     <servers />
   </component>
