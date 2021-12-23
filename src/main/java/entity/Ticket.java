@@ -1,8 +1,10 @@
 package main.java.entity;
 
+import jdk.jfr.Timestamp;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -12,7 +14,9 @@ public class Ticket {
     private int id;
     private int count;
     private String name;
-
+    private int barcode;
+    @Timestamp
+    private Date dispatchTime;
     @ManyToOne
     private main.java.entity.User user;
     @ManyToOne
