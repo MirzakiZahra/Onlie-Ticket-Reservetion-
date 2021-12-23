@@ -8,34 +8,28 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class TicketService {
+public class CityService {
     static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
-    public Ticket findTicket(int barcode) {
+    public void addCityByManager(City city) {
+
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String sql = "select * from Ticket where barcode= :barcode";
-        SQLQuery query = session.createSQLQuery(sql);
-        query.addEntity(Ticket.class);
-        query.setParameter("barcode", barcode);
-        Ticket ticket = (Ticket) query.list().get(0);
+        session.save(city);
         transaction.commit();
         session.close();
-        return ticket;
 
     }
-    public void updateTicket(Ticket ticket) {
+    public City findCity(String name){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.update(ticket);
+        String sql = "select * from City where name= :name";
+        SQLQuery query = session.createSQLQuery(sql);
+        query.addEntity(City.class);
+        query.setParameter("name", name);
+        City city= (City) query.list().get(0);
         transaction.commit();
         session.close();
-    }
-    public void addTicketByManager(Ticket ticket) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(ticket);
-        transaction.commit();
-        session.close();
+        return city;
     }
 }

@@ -16,7 +16,12 @@ public class Manegement {
         ticket.setCount(temp);
         user.getTicketList().add(ticket);
         ticket.setUser(user);
+        ticketService.updateTicket(ticket);
+        userService.updateUser(user);
 
-
+    }
+    public void createUser(String firstName,String lastName,int nationalCode){
+        User user=new User(firstName,lastName,nationalCode);
+        userService.addUser(user);
     }
 }

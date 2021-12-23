@@ -13,7 +13,6 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int count;
-    private String name;
     private int barcode;
     @Timestamp
     private Date dispatchTime;
@@ -25,4 +24,8 @@ public class Ticket {
     private City destinationCity;
     @ManyToOne
     private Vehicle vehicle;
+
+    public Ticket() {
+    }
+
 }

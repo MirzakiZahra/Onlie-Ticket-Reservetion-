@@ -17,4 +17,13 @@ public class User {
     private int nationalCode;
     @OneToMany
     private List<Ticket>ticketList=new ArrayList<>();
+
+    public User() {
+    }
+
+    public User(String firstName, String lastName, int nationalCode) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nationalCode = nationalCode;
+    }
 }

@@ -10,17 +10,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class Manegement {
-    static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
-    public void addCityByManager(City city) {
-
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(city);
-        transaction.commit();
-        session.close();
-
-    }
 
     public int checkExitOfCity(String nameCity) {
         Session session = sessionFactory.openSession();
@@ -35,13 +25,7 @@ public class Manegement {
 
     }
 
-    public void addTicketByManager(Ticket ticket) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(ticket);
-        transaction.commit();
-        session.close();
-    }
+
 
 
   //  public void buyingTicket(User user,){

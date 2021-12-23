@@ -31,4 +31,11 @@ public class UserService {
         transaction.commit();
         session.close();
     }
+    public void addUser(User user){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(user);
+        transaction.commit();
+        session.close();
+    }
 }
