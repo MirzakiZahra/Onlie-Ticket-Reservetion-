@@ -2,6 +2,7 @@ package main.java;
 
 import main.java.entity.City;
 import main.java.entity.Ticket;
+import main.java.entity.User;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,7 +21,8 @@ public class Manegement {
         session.close();
 
     }
-    public int checkExitOfCity(String nameCity){
+
+    public int checkExitOfCity(String nameCity) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         String sql = "select * from city where name = :nameCity";
@@ -32,11 +34,28 @@ public class Manegement {
         return output;
 
     }
-    public void addTicketByManager(Ticket ticket){
+
+    public void addTicketByManager(Ticket ticket) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.save(ticket);
         transaction.commit();
         session.close();
     }
+
+    public int checkExitOfTicket(String nameTicket) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql = "select * from city where name = :nameTicket";
+        SQLQuery query = session.createSQLQuery(sql);
+        query.addEntity(City.class);
+        query.setParameter("name", nameTicket);
+        int output = (Integer) query.list().size();
+        session.close();
+        return output;
+    }
+  //  public void buyingTicket(User user,){
+
+
+   // }
 }

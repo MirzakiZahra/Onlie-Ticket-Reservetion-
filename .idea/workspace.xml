@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23521bfc-3fa9-4863-95fb-922db2015ef2" name="Changes" comment="">
+    <list default="true" id="8358d6b3-8462-4341-ac22-36512a5f812e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hibernate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OnlineTicket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OnlineTicket.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Manegement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Manegement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="22eUXantccnyiNKjrHyYLplXs8M" />
+  <component name="ProjectId" id="22hOjWOkSyzzJhMztP85ThHQZCP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,25 +36,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mysql-connector-java-8.0.25.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hibernate" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\zahra\Desktop\HW16\OnlineTicket\src" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="23521bfc-3fa9-4863-95fb-922db2015ef2" name="Changes" comment="" />
-      <created>1640197595727</created>
+      <changelist id="8358d6b3-8462-4341-ac22-36512a5f812e" name="Changes" comment="" />
+      <created>1640286497441</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1640197595727</updated>
-      <workItem from="1640197599476" duration="1366000" />
+      <updated>1640286497441</updated>
+      <workItem from="1640286505028" duration="1682000" />
     </task>
     <servers />
   </component>

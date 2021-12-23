@@ -11,6 +11,7 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int count;
+    private String name;
 
     @ManyToOne
     private main.java.entity.User user;
@@ -18,4 +19,6 @@ public class Ticket {
     private City originCity;
     @ManyToOne
     private City destinationCity;
+    @ManyToOne
+    private Vehicle vehicle;
 }
