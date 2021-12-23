@@ -28,4 +28,12 @@ public class Ticket {
     public Ticket() {
     }
 
+    public Ticket(int count, int barcode, Date dispatchTime, City originCity, City destinationCity, Vehicle vehicle) {
+        this.count = count;
+        this.barcode = barcode;
+        this.dispatchTime = dispatchTime;
+        this.originCity = originCity;
+        this.destinationCity = destinationCity;
+        this.vehicle = vehicle;
+    }
 }
