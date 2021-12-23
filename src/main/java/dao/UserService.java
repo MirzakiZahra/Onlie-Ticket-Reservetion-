@@ -1,33 +1,33 @@
 package main.java.dao;
 
-import main.java.entity.City;
 import main.java.entity.Ticket;
+import main.java.entity.User;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class TicketService {
+public class UserService {
     static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-
-    public Ticket findTicket(int barcode) {
+    public User findUser(int nationalCode) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String sql = "select * from Ticket where barcode= :barcode";
+        String sql = "select * from User where nationalCode= :nationalCode";
         SQLQuery query = session.createSQLQuery(sql);
-        query.addEntity(Ticket.class);
-        query.setParameter("barcode", barcode);
-        Ticket ticket = (Ticket) query.list().get(0);
+        query.addEntity(User.class);
+        query.setParameter("nationalCode", nationalCode);
+        User user = (User) query.list().get(0);
         transaction.commit();
         session.close();
-        return ticket;
+        return user;
+
 
     }
-    public void updateTicket(Ticket ticket) {
+    public void updateUser(User user) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.update(ticket);
+        session.update(user);
         transaction.commit();
         session.close();
     }
